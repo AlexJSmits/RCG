@@ -7,9 +7,6 @@ public class CharControl : MonoBehaviour
 {
     public Transform Player;
     public float MovementSpeed;
-    bool isUsed;
-    KeyCode randomInput;
-    public Rigidbody2D rB;
 
     private KeyCode[] keyIdentity = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R,
     KeyCode.T, KeyCode.Y, KeyCode.U, KeyCode.I, KeyCode.O, KeyCode.P, KeyCode.A, KeyCode.S,
@@ -87,12 +84,12 @@ public class CharControl : MonoBehaviour
 
     void MoveRight()
     {
-        rB.AddForce(new Vector2(MovementSpeed, 0), ForceMode2D.Impulse);
+        Player.transform.Translate(Vector2.right * MovementSpeed * Time.deltaTime);
     }
 
     void MoveLeft()
     {
-        rB.AddForce(new Vector2(-MovementSpeed, 0), ForceMode2D.Impulse);
+        Player.transform.Translate(Vector2.left * MovementSpeed * Time.deltaTime);
     }
 
     void Crouch()
