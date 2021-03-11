@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class CharControl : MonoBehaviour
 {
-    public Transform Player;
-    public float MovementSpeed;
+    private float horizontalMove = 0;
+    public CharacterController2D controller;
+    bool jump = false;
+    bool crouch = false;
 
     private KeyCode[] keyIdentity = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R,
     KeyCode.T, KeyCode.Y, KeyCode.U, KeyCode.I, KeyCode.O, KeyCode.P, KeyCode.A, KeyCode.S,
@@ -59,45 +61,52 @@ public class CharControl : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(rightKey))
+        if (Input.GetKeyDown(rightKey))
         {
-            MoveRight();
+            horizontalMove = 1;
         }
-        else if (Input.GetKey(jumpKey))
+        
+        else if (Input.GetKeyUp(rightKey))
         {
-            Jump();
+            horizontalMove = 0;
         }
-        else if (Input.GetKey(crouchKey))
+        
+        if (Input.GetKeyDown(leftKey))
         {
-            Crouch();
+            horizontalMove = -1;
         }
-        else if (Input.GetKey(leftKey))
+        
+        else if (Input.GetKeyUp(leftKey))
         {
-            MoveLeft();
+            horizontalMove = 0;
         }
-        else if (Input.GetKey(killKey))
+
+
+        if (Input.GetKeyDown(jumpKey))
+        {
+            jump = true;
+        }
+        
+        if (Input.GetKeyDown(crouchKey))
+        {
+            crouch = true;
+        }
+        else if (Input.GetKeyUp(crouchKey))
+        {
+            crouch = false;
+        }
+        
+        if (Input.GetKeyDown(killKey))
         {
             KillPlayer();
         }
 
     }
 
-    void MoveRight()
+    private void FixedUpdate()
     {
-        Player.transform.Translate(Vector2.right * MovementSpeed * Time.deltaTime);
-    }
-
-    void MoveLeft()
-    {
-        Player.transform.Translate(Vector2.left * MovementSpeed * Time.deltaTime);
-    }
-
-    void Crouch()
-    {
-        
-    }
-    void Jump()
-    {
+        controller.Move(horizontalMove, crouch, jump);
+        jump = false;
 
     }
 
