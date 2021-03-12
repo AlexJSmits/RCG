@@ -9,6 +9,7 @@ public class CharControl : MonoBehaviour
     public CharacterController2D controller;
     bool jump = false;
     bool crouch = false;
+    public Animator animator;
 
     private KeyCode[] keyIdentity = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R,
     KeyCode.T, KeyCode.Y, KeyCode.U, KeyCode.I, KeyCode.O, KeyCode.P, KeyCode.A, KeyCode.S,
@@ -61,6 +62,8 @@ public class CharControl : MonoBehaviour
 
     void Update()
     {
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
         if (Input.GetKeyDown(rightKey))
         {
             horizontalMove = 1;
@@ -85,6 +88,7 @@ public class CharControl : MonoBehaviour
         if (Input.GetKeyDown(jumpKey))
         {
             jump = true;
+            Debug.Log("Jump Pressed");
         }
         
         if (Input.GetKeyDown(crouchKey))
