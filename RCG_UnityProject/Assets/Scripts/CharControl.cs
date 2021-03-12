@@ -88,7 +88,7 @@ public class CharControl : MonoBehaviour
         if (Input.GetKeyDown(jumpKey))
         {
             jump = true;
-            Debug.Log("Jump Pressed");
+            animator.SetBool("Jump", true);
         }
         
         if (Input.GetKeyDown(crouchKey))
@@ -114,9 +114,14 @@ public class CharControl : MonoBehaviour
 
     }
 
+    public void OnLanding()
+    {
+        animator.SetBool("Jump", false);
+    }
+
     void KillPlayer()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }
