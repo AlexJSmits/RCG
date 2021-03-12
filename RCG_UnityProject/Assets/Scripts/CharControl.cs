@@ -100,7 +100,7 @@ public class CharControl : MonoBehaviour
             crouch = false;
         }
         
-        if (Input.GetKeyDown(killKey))
+        if (Input.GetKey(killKey))
         {
             KillPlayer();
         }
