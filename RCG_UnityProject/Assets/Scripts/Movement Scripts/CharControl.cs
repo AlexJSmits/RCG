@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class CharControl : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class CharControl : MonoBehaviour
     bool jump = false;
     bool crouch = false;
     public Animator animator;
+    public UnityEvent OnStart;
 
     private KeyCode[] keyIdentity = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R,
     KeyCode.T, KeyCode.Y, KeyCode.U, KeyCode.I, KeyCode.O, KeyCode.P, KeyCode.A, KeyCode.S,
@@ -34,6 +36,12 @@ public class CharControl : MonoBehaviour
         jumpKey = KeyCode.Space;
 
         killKey = KeyCode.K;
+
+        if (OnStart != null)
+        {
+            OnStart.Invoke();
+        }
+
     }
 
 
