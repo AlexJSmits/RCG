@@ -31,7 +31,7 @@ public class CharControl : MonoBehaviour
 
         leftKey = KeyCode.A;
 
-        crouchKey = KeyCode.C;
+        crouchKey = KeyCode.S;
 
         jumpKey = KeyCode.Space;
 
