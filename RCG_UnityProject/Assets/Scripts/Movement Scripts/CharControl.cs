@@ -19,7 +19,6 @@ public class CharControl : MonoBehaviour
     private KeyCode leftKey;
     private KeyCode crouchKey;
     private KeyCode jumpKey;
-    private KeyCode killKey;
 
     private void OnEnable()
     {
@@ -34,8 +33,6 @@ public class CharControl : MonoBehaviour
         crouchKey = KeyCode.S;
 
         jumpKey = KeyCode.Space;
-
-        killKey = KeyCode.K;
 
         if (OnStart != null)
         {
@@ -71,7 +68,7 @@ public class CharControl : MonoBehaviour
     {
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetKeyDown(rightKey))
+        if (Input.GetKey(rightKey))
         {
             horizontalMove = 1;
         }
@@ -81,7 +78,7 @@ public class CharControl : MonoBehaviour
             horizontalMove = 0;
         }
 
-        if (Input.GetKeyDown(leftKey))
+        if (Input.GetKey(leftKey))
         {
             horizontalMove = -1;
         }
@@ -111,11 +108,6 @@ public class CharControl : MonoBehaviour
             animator.SetBool("isCrouching", false);
         }
 
-        if (Input.GetKey(killKey))
-        {
-            KillPlayer();
-        }
-
     }
 
     private void FixedUpdate()
@@ -136,13 +128,14 @@ public class CharControl : MonoBehaviour
         crouchKey = keyIdentity[RNG()];
 
         jumpKey = keyIdentity[RNG()];
-
-        killKey = keyIdentity[RNG()];
     }
 
     public void RandomiseMovement()
     {
         horizontalMove = 0;
+
+        checkArray[11] = true;
+        checkArray[26] = true;
 
         rightKey = keyIdentity[RNG()];
 
@@ -151,11 +144,19 @@ public class CharControl : MonoBehaviour
 
     public void RandomiseJump()
     {
+        checkArray[11] = true;
+        checkArray[10] = true;
+        checkArray[12] = true;
+
         jumpKey = keyIdentity[RNG()];
     }
 
     public void RandomiseCrouch()
     {
+        checkArray[26] = true;
+        checkArray[10] = true;
+        checkArray[12] = true;
+
         crouchKey = keyIdentity[RNG()];
     }
 
@@ -163,10 +164,4 @@ public class CharControl : MonoBehaviour
     {
         animator.SetBool("Jump", false);
     }
-
-    void KillPlayer()
-    {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
 }
