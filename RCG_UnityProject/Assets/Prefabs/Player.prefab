@@ -61,7 +61,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7070652682941109739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11, y: 0.05, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children:
   - {fileID: 7070652683944973856}
@@ -134,6 +134,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 7070652682941109730}
   animator: {fileID: 7070652682941109731}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &7070652682941109735
 Rigidbody2D:
   serializedVersion: 4

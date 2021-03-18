@@ -1,0 +1,460 @@
+fileFormatVersion: 2
+guid: 7f874cf2c0c79e442997c4634dbba941
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5352640175447645027
+    second: Seaweed_0
+  - first:
+      213: 1627073126378159443
+    second: Seaweed_1
+  - first:
+      213: 9113502216287490165
+    second: Seaweed_2
+  - first:
+      213: 1233488364194132728
+    second: Seaweed_3
+  - first:
+      213: 5110022875499451283
+    second: Seaweed_4
+  - first:
+      213: 8510470540216906329
+    second: Seaweed_5
+  - first:
+      213: -5608839440840576040
+    second: Seaweed_0
+  - first:
+      213: -8667101153844535262
+    second: Seaweed_1
+  - first:
+      213: 8121114476887146657
+    second: Seaweed_2
+  - first:
+      213: 2460110219664621420
+    second: Seaweed_3
+  - first:
+      213: -5128056446335145357
+    second: Seaweed_4
+  - first:
+      213: 1838089400888013019
+    second: Seaweed_5
+  - first:
+      213: 2920614140356107593
+    second: Seaweed_6
+  - first:
+      213: -735088317911496022
+    second: Seaweed_7
+  - first:
+      213: 8626138780795953570
+    second: Seaweed_8
+  - first:
+      213: 1387808216779467097
+    second: Seaweed_9
+  - first:
+      213: -1254099443474774187
+    second: Seaweed_10
+  - first:
+      213: -7260093823371146116
+    second: Seaweed_11
+  - first:
+      213: 2765151668425467545
+    second: Seaweed_12
+  - first:
+      213: 6990326694778087339
+    second: Seaweed_13
+  - first:
+      213: 1001141424291133812
+    second: Seaweed_14
+  - first:
+      213: 6467217800347278007
+    second: Seaweed_15
+  - first:
+      213: 1733398172830899025
+    second: Seaweed_16
+  - first:
+      213: -4748926929566656490
+    second: Seaweed_17
+  - first:
+      213: 8847105747753219002
+    second: Seaweed_18
+  - first:
+      213: 4781624328033942665
+    second: Seaweed_19
+  - first:
+      213: -4640846942578263981
+    second: Seaweed_20
+  - first:
+      213: 2951400076697796200
+    second: Seaweed_21
+  - first:
+      213: 4731778500494880283
+    second: Seaweed_22
+  - first:
+      213: -3893269313117012237
+    second: Seaweed_23
+  - first:
+      213: -1813228199030538819
+    second: Seaweed_24
+  - first:
+      213: -8273937007418562433
+    second: Seaweed_25
+  - first:
+      213: 9201143939636876445
+    second: Seaweed_26
+  - first:
+      213: -4917535383910287218
+    second: Seaweed_27
+  - first:
+      213: -6355636468317337756
+    second: Seaweed_28
+  - first:
+      213: 5538456262668840879
+    second: Seaweed_29
+  - first:
+      213: 3295093465501809860
+    second: Seaweed_30
+  - first:
+      213: 2278234629830919211
+    second: Seaweed_31
+  - first:
+      213: 8454579011637300015
+    second: Seaweed_32
+  - first:
+      213: -7367353406346896783
+    second: Seaweed_33
+  - first:
+      213: -6545373806641197770
+    second: Seaweed_34
+  - first:
+      213: 2180795298588414839
+    second: Seaweed_35
+  - first:
+      213: 4441983334775118291
+    second: Seaweed_36
+  - first:
+      213: 1570229157777916946
+    second: Seaweed_37
+  - first:
+      213: -3727968132587813395
+    second: Seaweed_38
+  - first:
+      213: -2828013226311844027
+    second: Seaweed_39
+  - first:
+      213: 6050258761445656419
+    second: Seaweed_40
+  - first:
+      213: -5297392707491269930
+    second: Seaweed_41
+  - first:
+      213: -3622593101465669712
+    second: Seaweed_42
+  - first:
+      213: 6612452661175531835
+    second: Seaweed_43
+  - first:
+      213: -7414354033048745315
+    second: Seaweed_44
+  - first:
+      213: 3946540863544530469
+    second: Seaweed_45
+  - first:
+      213: 7147731451545898240
+    second: Seaweed_46
+  - first:
+      213: 4914428611112475492
+    second: Seaweed_47
+  - first:
+      213: -3785076477991031883
+    second: Seaweed_48
+  - first:
+      213: -4979331043067636583
+    second: Seaweed_49
+  - first:
+      213: 7191059927017353926
+    second: Seaweed_50
+  - first:
+      213: -3955605946875496026
+    second: Seaweed_51
+  - first:
+      213: -708530336347782998
+    second: Seaweed_52
+  - first:
+      213: 5322414640850702500
+    second: Seaweed_53
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 15.99
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Seaweed_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d33f76de366922b0800000000000000
+      internalID: -5608839440840576040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seaweed_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220e7bcbb6548b780800000000000000
+      internalID: -8667101153844535262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seaweed_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a00427d69ef3b070800000000000000
+      internalID: 8121114476887146657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seaweed_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ffa67e531142220800000000000000
+      internalID: 2460110219664621420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seaweed_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37aaa08e4db75d8b0800000000000000
+      internalID: -5128056446335145357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seaweed_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0375d4294328910800000000000000
+      internalID: 1838089400888013019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
