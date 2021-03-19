@@ -16,7 +16,7 @@ public class LetterParticlePress : MonoBehaviour
         {
             foreach (KeyCode keyCode in keyCodes)
             {
-                if (Input.GetKey(keyCode))
+                if (Input.GetKeyDown(keyCode))
                 {
                     Debug.Log("KeyCode down: " + keyCode);
                     fileName = keyCode + "-LetterParticle";

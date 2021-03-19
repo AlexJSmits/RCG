@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651589571752638299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7, y: 1.3000001, z: 0}
+  m_LocalPosition: {x: 1.2, y: 1.4000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2297954324960029957}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768dd518cd5b2b143b6c4aff3a12e691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instantiatePoint: {fileID: 9091012669572765794}
+  instantiateObject: {fileID: 0}
 --- !u!1 &7070652682366636327
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,10 +117,10 @@ GameObject:
   - component: {fileID: 7070652682941109733}
   - component: {fileID: 7070652682941109732}
   - component: {fileID: 7070652682941109735}
-  - component: {fileID: 7070652682941109728}
   - component: {fileID: 7070652682941109729}
   - component: {fileID: 7070652682941109730}
   - component: {fileID: 7070652682941109731}
+  - component: {fileID: 3847380591749142065}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -235,32 +235,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &7070652682941109728
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7070652682941109739}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.037728533, y: 0.07573292}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6260163, y: 1.6260163}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 1
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.49634072, y: 0.31124115}
-  m_EdgeRadius: 0
 --- !u!58 &7070652682941109729
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -298,7 +272,7 @@ MonoBehaviour:
     m_Bits: 55
   m_GroundCheck: {fileID: 7070652682366636320}
   m_CeilingCheck: {fileID: 7070652683944973856}
-  m_CrouchDisableCollider: {fileID: 7070652682941109728}
+  m_CrouchDisableCollider: {fileID: 3847380591749142065}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -348,6 +322,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &3847380591749142065
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7070652682941109739}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.09}
+  serializedVersion: 2
+  m_Radius: 0.21082497
 --- !u!1 &7070652683944973863
 GameObject:
   m_ObjectHideFlags: 0
