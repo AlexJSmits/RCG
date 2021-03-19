@@ -10,7 +10,8 @@ public class CharacterController2D : MonoBehaviour
 	public LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
 	public Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
 	public Transform m_CeilingCheck;							// A position marking where to check for ceilings
-	public Collider2D m_CrouchDisableCollider;				// A collider that will be disabled when crouching
+	public Collider2D m_CrouchDisableCollider;              // A collider that will be disabled when crouching
+	public Animator animator;
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
@@ -135,12 +136,14 @@ public class CharacterController2D : MonoBehaviour
 
 	private void Flip()
 	{
-		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;
-
-		// Multiply the player's x local scale by -1.
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
+		if (!m_FacingRight)
+		{
+			GetComponent<SpriteRenderer>().flipX = true;
+		}
+		else if (m_FacingRight)
+		{
+			GetComponent<SpriteRenderer>().flipX = false;
+		}
 	}
 }

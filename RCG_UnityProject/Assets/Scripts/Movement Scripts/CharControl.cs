@@ -89,11 +89,10 @@ public class CharControl : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(jumpKey))
+        if (Input.GetKeyDown(jumpKey) && crouch == false)
         {
             jump = true;
             animator.SetBool("Jump", true);
-            animator.SetBool("isCrouching", false);
         }
 
         if (Input.GetKeyDown(crouchKey))
@@ -115,6 +114,10 @@ public class CharControl : MonoBehaviour
         controller.Move(horizontalMove, crouch, jump);
         jump = false;
 
+        if (crouch == true)
+        {
+            animator.SetBool("isCrouching", true);
+        }
     }
 
     public void RandomiseAll()
