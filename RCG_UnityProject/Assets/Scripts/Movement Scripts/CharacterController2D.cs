@@ -11,7 +11,6 @@ public class CharacterController2D : MonoBehaviour
 	public Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
 	public Transform m_CeilingCheck;							// A position marking where to check for ceilings
 	public Collider2D m_CrouchDisableCollider;              // A collider that will be disabled when crouching
-	public Animator animator;
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
