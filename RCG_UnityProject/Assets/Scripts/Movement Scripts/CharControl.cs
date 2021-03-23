@@ -14,6 +14,9 @@ public class CharControl : MonoBehaviour
     KeyCode.T, KeyCode.Y, KeyCode.U, KeyCode.I, KeyCode.O, KeyCode.P, KeyCode.A, KeyCode.S,
     KeyCode.D, KeyCode.F, KeyCode.G, KeyCode.H, KeyCode.J, KeyCode.K, KeyCode.L, KeyCode.Z,
     KeyCode.X, KeyCode.C, KeyCode.V, KeyCode.B, KeyCode.N, KeyCode.M, KeyCode.Space};
+
+    //public Sprite[] _keyboardSprites;
+
     bool[] checkArray;
     private KeyCode rightKey;
     private KeyCode leftKey;
