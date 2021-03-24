@@ -23,6 +23,7 @@ public class CharControl : MonoBehaviour
     private KeyCode crouchKey;
     private KeyCode jumpKey;
 
+
     private void OnEnable()
     {
         checkArray = new bool[keyIdentity.Length];
