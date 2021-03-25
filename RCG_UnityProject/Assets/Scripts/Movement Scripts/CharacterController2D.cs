@@ -19,6 +19,9 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 	private bool m_inCyote = false;
+	private float timer;
+	private bool jumpSaveOn;
+	private Animator characterAnimator;
 
 	[Header("Events")]
 	[Space]
@@ -34,6 +37,7 @@ public class CharacterController2D : MonoBehaviour
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
+		characterAnimator = GetComponent<Animator>();
 
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
@@ -63,6 +67,11 @@ public class CharacterController2D : MonoBehaviour
 				}
 			}
 		}
+
+		if (timer > 0)
+			{
+				timer = timer - Time.deltaTime;
+			} 
 	}
 
 	private void CoyoteTime()
@@ -142,8 +151,29 @@ public class CharacterController2D : MonoBehaviour
 			m_inCyote = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
-	}
 
+		if (!m_Grounded && jump)
+		{
+			jumpSaveOn = true;
+			timer = 0.1f;
+		}
+
+		if (jumpSaveOn && m_Grounded)
+		{
+			if (timer > 0)
+			{
+				m_Rigidbody2D.velocity = new Vector2(0, 0);
+				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+				characterAnimator.SetBool("Jump", true);
+				jumpSaveOn = false;
+			}
+
+			if (timer <= 0)
+			{
+				jumpSaveOn = false;
+			}
+		}
+	}
 
 	private void Flip()
 	{

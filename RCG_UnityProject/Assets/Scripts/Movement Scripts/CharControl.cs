@@ -7,7 +7,7 @@ public class CharControl : MonoBehaviour
     public CharacterController2D controller;
     bool jump = false;
     bool crouch = false;
-    public Animator animator;
+    private Animator characterAnimator;
     public UnityEvent OnStart;
 
     private KeyCode[] keyIdentity = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R,
@@ -27,6 +27,7 @@ public class CharControl : MonoBehaviour
     private void OnEnable()
     {
         checkArray = new bool[keyIdentity.Length];
+        characterAnimator = GetComponent<Animator>();
     }
     void Start()
     {
@@ -70,7 +71,7 @@ public class CharControl : MonoBehaviour
 
     void Update()
     {
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        characterAnimator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetKey(rightKey))
         {
@@ -96,7 +97,7 @@ public class CharControl : MonoBehaviour
         if (Input.GetKeyDown(jumpKey) && crouch == false)
         {
             jump = true;
-            animator.SetBool("Jump", true);
+            characterAnimator.SetBool("Jump", true);
         }
 
         if (Input.GetKeyDown(crouchKey))
@@ -162,12 +163,12 @@ public class CharControl : MonoBehaviour
 
     public void OnLanding()
     {
-        animator.SetBool("Jump", false);
+        characterAnimator.SetBool("Jump", false);
     }
 
     public void OnCrouch (bool isCrouching)
     {
-        animator.SetBool("isCrouching", isCrouching);
+        characterAnimator.SetBool("isCrouching", isCrouching);
 
     }
 
