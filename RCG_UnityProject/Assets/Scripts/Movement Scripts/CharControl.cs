@@ -18,10 +18,10 @@ public class CharControl : MonoBehaviour
     //public Sprite[] _keyboardSprites;
 
     bool[] checkArray;
-    private KeyCode rightKey;
-    private KeyCode leftKey;
-    private KeyCode crouchKey;
-    private KeyCode jumpKey;
+    public KeyCode rightKey;
+    public KeyCode leftKey;
+    public KeyCode crouchKey;
+    public KeyCode jumpKey;
 
 
     private void OnEnable()
