@@ -18,6 +18,7 @@ public class CharacterController2D : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
+	private bool m_inCyote = false;
 
 	[Header("Events")]
 	[Space]
@@ -43,23 +44,32 @@ public class CharacterController2D : MonoBehaviour
 
 	private void Update()
 	{
-		bool wasGrounded = m_Grounded;
-		m_Grounded = false;
-
-		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
-		// This can be done using layers instead but Sample Assets will not overwrite your project settings.
-		Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
-		for (int i = 0; i < colliders.Length; i++)
+		if (!m_inCyote)
 		{
-			if (colliders[i].gameObject != gameObject)
+			bool wasGrounded = m_Grounded;
+
+			// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
+			// This can be done using layers instead but Sample Assets will not overwrite your project settings.
+			Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
+			for (int i = 0; i < colliders.Length; i++)
 			{
-				m_Grounded = true;
-				if (!wasGrounded)
-					OnLandEvent.Invoke();
+				if (colliders[i].gameObject != gameObject)
+				{
+					m_inCyote = true;
+					Invoke("CoyoteTime", 1);
+					m_Grounded = true;
+					if (!wasGrounded)
+						OnLandEvent.Invoke();
+				}
 			}
 		}
 	}
 
+	private void CoyoteTime()
+	{		
+		m_Grounded = false;
+		m_inCyote = false;
+	}
 
 	public void Move(float move, bool crouch, bool jump)
 	{
@@ -127,7 +137,8 @@ public class CharacterController2D : MonoBehaviour
 		if (m_Grounded && jump)
 		{
 			// Add a vertical force to the player.
-			m_Grounded = false;
+			//m_Grounded = false;
+			m_inCyote = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
 	}
