@@ -94,7 +94,7 @@ public class CharControl : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(jumpKey) && crouch == false)
+        if (Input.GetKeyDown(jumpKey) && !crouch)
         {
             jump = true;
             characterAnimator.SetBool("Jump", true);

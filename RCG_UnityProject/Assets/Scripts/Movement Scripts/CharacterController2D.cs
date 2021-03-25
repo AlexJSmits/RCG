@@ -34,6 +34,7 @@ public class CharacterController2D : MonoBehaviour
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
 
+
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -70,7 +71,7 @@ public class CharacterController2D : MonoBehaviour
 
 		if (timer > 0)
 			{
-				timer = timer - Time.deltaTime;
+				timer -= Time.deltaTime;
 			} 
 	}
 
@@ -146,18 +147,19 @@ public class CharacterController2D : MonoBehaviour
 		if (m_Grounded && jump)
 		{
 			// Add a vertical force to the player.
-			//m_Grounded = false;
 			m_Rigidbody2D.velocity = new Vector2 (0, 0);
 			m_inCyote = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
 
+		//check to see if the player attempts a jump while still in the air
 		if (!m_Grounded && jump)
 		{
 			jumpSaveOn = true;
 			timer = 0.1f;
 		}
 
+		//if the player has attempted a jump in the air, check to see if the player lands 0.1 seconds after their input. If true then allow them to jump immediately.
 		if (jumpSaveOn && m_Grounded)
 		{
 			if (timer > 0)
@@ -168,7 +170,7 @@ public class CharacterController2D : MonoBehaviour
 				jumpSaveOn = false;
 			}
 
-			if (timer <= 0)
+			else if (timer <= 0)
 			{
 				jumpSaveOn = false;
 			}
