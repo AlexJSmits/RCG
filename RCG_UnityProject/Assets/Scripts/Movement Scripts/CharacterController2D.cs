@@ -56,7 +56,7 @@ public class CharacterController2D : MonoBehaviour
 				if (colliders[i].gameObject != gameObject)
 				{
 					m_inCyote = true;
-					Invoke("CoyoteTime", 1);
+					Invoke("CoyoteTime", 0.175f);
 					m_Grounded = true;
 					if (!wasGrounded)
 						OnLandEvent.Invoke();
@@ -138,6 +138,7 @@ public class CharacterController2D : MonoBehaviour
 		{
 			// Add a vertical force to the player.
 			//m_Grounded = false;
+			m_Rigidbody2D.velocity = new Vector2 (0, 0);
 			m_inCyote = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
