@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instantiateObject: {fileID: 0}
+  character: {fileID: 7070652682941109732}
 --- !u!1 &7070652682366636327
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,8 +399,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ae615cfae0d2f47899c35e4dd9a610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalMove: 0
   controller: {fileID: 7070652682941109730}
-  animator: {fileID: 7070652682941109731}
   OnStart:
     m_PersistentCalls:
       m_Calls:
@@ -415,6 +416,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  rightKey: 0
+  leftKey: 0
+  crouchKey: 0
+  jumpKey: 0
+  canMove: 0
+  startDelay: 0
 --- !u!50 &7070652682941109735
 Rigidbody2D:
   serializedVersion: 4

@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class CharControl : MonoBehaviour
 {
-    private float horizontalMove = 0;
+    public float horizontalMove = 0;
     public CharacterController2D controller;
     bool jump = false;
     bool crouch = false;
@@ -23,6 +23,8 @@ public class CharControl : MonoBehaviour
     public KeyCode crouchKey;
     public KeyCode jumpKey;
 
+    public bool canMove = false;
+    public float startDelay;
 
     private void OnEnable()
     {
@@ -44,9 +46,14 @@ public class CharControl : MonoBehaviour
             OnStart.Invoke();
         }
 
+        Invoke("LevelStart", startDelay);
+
     }
 
-
+    void LevelStart()
+    {
+        canMove = true;
+    }
 
     int RNG()
     {
@@ -72,42 +79,44 @@ public class CharControl : MonoBehaviour
     void Update()
     {
         characterAnimator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-
-        if (Input.GetKey(rightKey))
+        if (canMove == true)
         {
-            horizontalMove = 1;
-        }
+            if (Input.GetKey(rightKey))
+            {
+                horizontalMove = 1;
+            }
 
-        else if (Input.GetKeyUp(rightKey))
-        {
-            horizontalMove = 0;
-        }
+            else if (Input.GetKeyUp(rightKey))
+            {
+                horizontalMove = 0;
+            }
 
-        if (Input.GetKey(leftKey))
-        {
-            horizontalMove = -1;
-        }
+            if (Input.GetKey(leftKey))
+            {
+                horizontalMove = -1;
+            }
 
-        else if (Input.GetKeyUp(leftKey))
-        {
-            horizontalMove = 0;
-        }
+            else if (Input.GetKeyUp(leftKey))
+            {
+                horizontalMove = 0;
+            }
 
 
-        if (Input.GetKeyDown(jumpKey) && !crouch)
-        {
-            jump = true;
-            characterAnimator.SetBool("Jump", true);
-        }
+            if (Input.GetKeyDown(jumpKey) && !crouch)
+            {
+                jump = true;
+                characterAnimator.SetBool("Jump", true);
+            }
 
-        if (Input.GetKeyDown(crouchKey))
-        {
-            crouch = true;
-            //animator.SetBool("Jump", false);
-        }
-        else if (Input.GetKeyUp(crouchKey))
-        {
-            crouch = false;
+            if (Input.GetKeyDown(crouchKey))
+            {
+                crouch = true;
+                //animator.SetBool("Jump", false);
+            }
+            else if (Input.GetKeyUp(crouchKey))
+            {
+                crouch = false;
+            }
         }
 
     }

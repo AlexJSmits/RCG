@@ -6,13 +6,14 @@ using System;
 public class LetterParticlePress : MonoBehaviour
 {
     public Transform instantiateObject;
+    public CharControl character;
 
     private readonly Array keyCodes = Enum.GetValues(typeof(KeyCode));
     private String fileName;
 
     void Update()
     {
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && character.canMove == true)
         {
             foreach (KeyCode keyCode in keyCodes)
             {
