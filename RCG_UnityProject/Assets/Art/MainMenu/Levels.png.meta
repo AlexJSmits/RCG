@@ -1,7 +1,73 @@
 fileFormatVersion: 2
 guid: 743fe8881d9f0494fa1f30dbb4cd0d4f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4329440586233989439
+    second: Reset Progression
+  - first:
+      213: 3483283174894770639
+    second: Yes
+  - first:
+      213: -3073875581494082270
+    second: No
+  - first:
+      213: -8582481030776740843
+    second: Levels_3
+  - first:
+      213: -4329694457745672146
+    second: Levels_4
+  - first:
+      213: 483622757769907605
+    second: Levels_5
+  - first:
+      213: -2644092668288578202
+    second: Levels_6
+  - first:
+      213: 5240983979688009797
+    second: Levels_7
+  - first:
+      213: -8253397970809480841
+    second: Levels_8
+  - first:
+      213: 5899008983209255585
+    second: Levels_9
+  - first:
+      213: -3565563223689418230
+    second: Levels_10
+  - first:
+      213: 8407395333194056842
+    second: Levels_11
+  - first:
+      213: -3984585504711263316
+    second: Levels_12
+  - first:
+      213: 8376846895221894574
+    second: Levels_13
+  - first:
+      213: 7625660134041518368
+    second: Levels_14
+  - first:
+      213: 1507802683668932186
+    second: Levels_15
+  - first:
+      213: 5211141267167497221
+    second: Levels
+  - first:
+      213: 1436874398258650327
+    second: Levels_17
+  - first:
+      213: -7527930898644110015
+    second: Levels_18
+  - first:
+      213: -7417772951989040711
+    second: Levels_19
+  - first:
+      213: 6200624698305375475
+    second: Levels_20
+  - first:
+      213: -8595335644714021428
+    second: Levels_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +107,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +139,153 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Reset Progression
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 1320
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c63d55a9bcbae3c0800000000000000
+      internalID: -4329440586233989439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Levels
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 0
+        width: 459
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50cc5e76f51b15840800000000000000
+      internalID: 5211141267167497221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yes
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 17
+        width: 240
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc992b3a79b175030800000000000000
+      internalID: 3483283174894770639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: No
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 21
+        width: 164
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2254c49d1766755d0800000000000000
+      internalID: -3073875581494082270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
