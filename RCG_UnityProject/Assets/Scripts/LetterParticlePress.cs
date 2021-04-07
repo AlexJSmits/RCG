@@ -6,7 +6,7 @@ using System;
 public class LetterParticlePress : MonoBehaviour
 {
     public Transform instantiateObject;
-    public CharControl character;
+    public CharacterInputs character;
 
     private readonly Array keyCodes = Enum.GetValues(typeof(KeyCode));
     private String fileName;

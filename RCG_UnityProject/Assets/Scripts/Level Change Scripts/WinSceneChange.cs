@@ -13,14 +13,14 @@ public class WinSceneChange : MonoBehaviour
     private GameObject winToggle;
     private Animator playerAnimator;
     private Rigidbody2D rigidBody;
-    private CharControl charControl;
+    private CharacterInputs CharacterInputs;
     private Animator gemAnimator;
 
     private void Start()
     {
         winToggle = this.transform.GetChild(0).gameObject;
         gemAnimator = this.transform.GetChild(1).GetComponent<Animator>();
-        charControl = playerController.GetComponent<CharControl>();
+        CharacterInputs = playerController.GetComponent<CharacterInputs>();
         rigidBody = playerController.GetComponent<Rigidbody2D>();
         playerAnimator = playerController.GetComponent<Animator>();
     }
@@ -37,8 +37,8 @@ public class WinSceneChange : MonoBehaviour
         {
             gemAnimator.SetTrigger("Win");
             winToggle.SetActive(true);
-            charControl.canMove = false;
-            charControl.enabled = false;
+            CharacterInputs.canMove = false;
+            CharacterInputs.enabled = false;
             rigidBody.velocity = new Vector2(0, 0);
             playerAnimator.SetTrigger("Win");
             Invoke("ChangeScene", waitTime);

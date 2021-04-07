@@ -37,7 +37,7 @@ public class KeyboardCanvas : MonoBehaviour
     private Image Space;
     #endregion
 
-    public CharControl character;
+    public CharacterInputs character;
 
     private readonly Array keyCodes = Enum.GetValues(typeof(KeyCode));
     private bool holdingDown;
