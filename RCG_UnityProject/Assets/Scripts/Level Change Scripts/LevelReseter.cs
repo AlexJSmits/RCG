@@ -6,7 +6,7 @@ public class LevelReseter : MonoBehaviour
 {
     public LevelScriptableObject Levels;
 
-    void LevelReset()
+    public void LevelReset()
     {
         Levels.level1 = false;
         Levels.level2 = false;
