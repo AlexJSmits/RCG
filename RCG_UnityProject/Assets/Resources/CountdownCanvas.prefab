@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7227679165131817942}
   - component: {fileID: 5238967181780978102}
   - component: {fileID: 703727843623187555}
+  - component: {fileID: 837143376}
   m_Layer: 5
   m_Name: CountdownCanvas
   m_TagString: Untagged
@@ -99,6 +100,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &837143376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214324249442603350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e261a8012844349a53ea10c4fb0be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8311776526891202902}
 --- !u!1 &8311776526810316595
 GameObject:
   m_ObjectHideFlags: 0
