@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 7070652682941109731}
   - component: {fileID: 3847380591749142065}
   - component: {fileID: 646791231}
+  - component: {fileID: 8088983373725249982}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -405,7 +406,19 @@ MonoBehaviour:
   controller: {fileID: 7070652682941109730}
   OnStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8088983373725249982}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   rightKey: 0
   leftKey: 0
   crouchKey: 0
@@ -560,6 +573,19 @@ PlayableDirector:
   m_ExposedReferences:
     m_References:
     - 259b86cb166f3004eb2c145b7f3eabe9: {fileID: 0}
+--- !u!114 &8088983373725249982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7070652682941109739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d8b37ca045397c4dafd2b32ff2370ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Levels: {fileID: 11400000, guid: 364f8589afe8ed54b8aa653985ee47d1, type: 2}
 --- !u!1 &7070652683944973863
 GameObject:
   m_ObjectHideFlags: 0
