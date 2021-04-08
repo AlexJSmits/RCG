@@ -76,7 +76,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &1671275749
 MonoBehaviour:
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_renderer: {fileID: 1671275750}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 3
+  _SortingOrder: 4
 --- !u!1 &651589571752638299
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instantiateObject: {fileID: 0}
   character: {fileID: 7070652682941109732}
+  characterInput: {fileID: 7070652682941109732}
 --- !u!1 &7070652682366636327
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +329,7 @@ Transform:
   m_GameObject: {fileID: 7070652682941109739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalScale: {x: 2.4, y: 2.4, z: 1}
   m_Children:
   - {fileID: 7070652683944973856}
   - {fileID: 7070652682366636320}
@@ -410,7 +411,7 @@ MonoBehaviour:
   crouchKey: 0
   jumpKey: 0
   canMove: 0
-  startDelay: 0
+  startDelay: 5.5
 --- !u!50 &7070652682941109735
 Rigidbody2D:
   serializedVersion: 4
@@ -660,7 +661,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: b61103b3cc820644b9cc2b96ee007d0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
