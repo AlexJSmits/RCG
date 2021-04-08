@@ -16,32 +16,28 @@ public class LetterParticlePress : MonoBehaviour
 
     void Update()
     {
-        if (characterInput.canMove)
+        if (Input.anyKeyDown && character.canMove == true)
         {
-            if (Input.anyKeyDown && character.canMove == true)
+            foreach (KeyCode keyCode in keyCodes)
             {
-                foreach (KeyCode keyCode in keyCodes)
+                if (Input.GetKeyDown(keyCode))
                 {
-                    if (Input.GetKeyDown(keyCode))
+                    //Debug.Log("KeyCode down: " + keyCode);
+                    fileName = keyCode + "-LetterParticle";
+                    UnityEngine.Object loadedObject = Resources.Load("LetterPrefabs/" + fileName);
+                    string stringToCheck = fileName;
+                    string[] stringArray = { "A-LetterParticle", "B-LetterParticle", "C-LetterParticle", "D-LetterParticle", "E-LetterParticle", "F-LetterParticle", "G-LetterParticle", "H-LetterParticle", "I-LetterParticle", "J-LetterParticle", "K-LetterParticle", "L-LetterParticle", "M-LetterParticle", "N-LetterParticle", "O-LetterParticle", "P-LetterParticle", "Q-LetterParticle", "R-LetterParticle", "S-LetterParticle", "T-LetterParticle", "U-LetterParticle", "V-LetterParticle", "W-LetterParticle", "X-LetterParticle", "Y-LetterParticle", "Z-LetterParticle", "Space-LetterParticle" };
+                    foreach (string x in stringArray)
                     {
-                        //Debug.Log("KeyCode down: " + keyCode);
-                        fileName = keyCode + "-LetterParticle";
-                        UnityEngine.Object loadedObject = Resources.Load("LetterPrefabs/" + fileName);
-                        string stringToCheck = fileName;
-                        string[] stringArray = { "A-LetterParticle", "B-LetterParticle", "C-LetterParticle", "D-LetterParticle", "E-LetterParticle", "F-LetterParticle", "G-LetterParticle", "H-LetterParticle", "I-LetterParticle", "J-LetterParticle", "K-LetterParticle", "L-LetterParticle", "M-LetterParticle", "N-LetterParticle", "O-LetterParticle", "P-LetterParticle", "Q-LetterParticle", "R-LetterParticle", "S-LetterParticle", "T-LetterParticle", "U-LetterParticle", "V-LetterParticle", "W-LetterParticle", "X-LetterParticle", "Y-LetterParticle", "Z-LetterParticle", "Space-LetterParticle" };
-                        foreach (string x in stringArray)
+                        if (stringToCheck.Contains(x))
                         {
-                            if (stringToCheck.Contains(x))
-                            {
-                                Instantiate((GameObject)loadedObject, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.Euler(0, 180, 0), instantiateObject);
-                                break;
-                            }
+                            Instantiate((GameObject)loadedObject, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.Euler(0, 180, 0), instantiateObject);
+                            break;
                         }
-                        break;
                     }
+                    break;
                 }
             }
         }
-
     }
 }

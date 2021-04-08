@@ -53,6 +53,7 @@ public class CharacterInputs : MonoBehaviour
     void LevelStart()
     {
         canMove = true;
+        startDelay = 0.0f;
     }
 
     int RNG()

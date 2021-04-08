@@ -18,11 +18,12 @@ public class InGameMenu : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Escape) && menuBool == true)
         {
             menuBool = false;
+            if (characterInputs.startDelay <= 0.0f)
+                characterInputs.canMove = true;
         }
 
         if (menuBool == false)
         {
-            characterInputs.canMove = true;
             Time.timeScale = 1.0f;
             menuToggle.SetActive(false);
         }
@@ -38,6 +39,8 @@ public class InGameMenu : MonoBehaviour
     public void Resume()
     {
         menuBool = false;
+        if (characterInputs.startDelay <= 0.0f)
+            characterInputs.canMove = true;
     }
 
     public void MainMenu()
