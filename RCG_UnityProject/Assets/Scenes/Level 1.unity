@@ -20701,6 +20701,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4292705059795838084, guid: 45bdbe31070799b4c8bcda615e186f40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4292705061120977329, guid: 45bdbe31070799b4c8bcda615e186f40, type: 3}
       propertyPath: m_Name
       value: InGameMenuCanvas
