@@ -1,20 +1,29 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.U2D;
 using UnityEngine;
 
 public class DisappearingPlatfroms : MonoBehaviour
 {
     private SpriteRenderer sprite;
-    private Animator animator;
 
+    public float length;
     public float respawnDelay;
-    
+
+    private Color newColor;
+    private Color oldColor;
+
 
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+
+        oldColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+
+        newColor = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+
+        sprite.color = oldColor;
     }
 
     private void Update()
@@ -29,14 +38,12 @@ public class DisappearingPlatfroms : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        animator.SetTrigger("Disappear");
-        Invoke("Reappear", 7 + respawnDelay);
+        oldColor = Color.Lerp(oldColor, newColor, length * Time.deltaTime);
     }
 
     void Reappear()
     {
-        Debug.Log("Now");
-        animator.SetTrigger("Reappear");
+
     }
 
 }
