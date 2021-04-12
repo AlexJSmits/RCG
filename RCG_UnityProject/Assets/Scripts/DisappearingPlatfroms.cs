@@ -8,11 +8,15 @@ public class DisappearingPlatfroms : MonoBehaviour
 {
     private SpriteRenderer sprite;
 
-    public float length;
+    public float disappearTimer;
+    public float reappearTimer;
+
     public float respawnDelay;
 
     private Color newColor;
     private Color oldColor;
+    private bool isFading;
+    private bool isReappearing;
 
 
     void Start()
@@ -23,27 +27,38 @@ public class DisappearingPlatfroms : MonoBehaviour
 
         newColor = new Color(1.0f, 1.0f, 1.0f, 0.0f);
 
-        sprite.color = oldColor;
     }
 
     private void Update()
     {
-        if (sprite.color.a == 0)
+
+        if (sprite.color == newColor)
         {
             GetComponent<BoxCollider2D>().enabled = false;
+            isFading = false;
+            Invoke("Reappear", respawnDelay );
         }
         else
+        {
             GetComponent<BoxCollider2D>().enabled = true;
+            isReappearing = false;
+        }
+
+        if (isFading)
+            sprite.color = Color.Lerp(oldColor, newColor, Mathf.Lerp(0, 1, disappearTimer));
+
+        if (isReappearing)
+            sprite.color = Color.Lerp(newColor, oldColor, Mathf.Lerp(0, 1, disappearTimer));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        oldColor = Color.Lerp(oldColor, newColor, length * Time.deltaTime);
+        isFading = true;
     }
 
     void Reappear()
     {
-
+        isReappearing = true;
     }
 
 }
