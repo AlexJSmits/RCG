@@ -122,7 +122,7 @@ public class CharacterInputs : MonoBehaviour
                 crouch = false;
             }
 
-            if (Input.GetKey(kickKey))
+            if (Input.GetKeyDown(kickKey))
             {
                 characterAnimator.SetTrigger("Kick");
             }
