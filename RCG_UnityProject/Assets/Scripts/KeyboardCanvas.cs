@@ -116,7 +116,7 @@ public class KeyboardCanvas : MonoBehaviour
                 if (Input.GetKeyDown(keyCode))
                 {
                     // kCode.
-                    if (character.jumpKey == keyCode | character.leftKey == keyCode | character.rightKey == keyCode | character.crouchKey == keyCode)
+                    if (character.jumpKey == keyCode | character.leftKey == keyCode | character.rightKey == keyCode | character.crouchKey == keyCode | character.kickKey == keyCode)
                     {
                         for (int i = 0; i < KeyDisplayArray.Count; i++)
                         {

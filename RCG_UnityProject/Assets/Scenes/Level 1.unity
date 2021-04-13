@@ -20891,33 +20891,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6884192889555683017, guid: e42521611d1dab74aa1112f43ff7999d, type: 3}
-      propertyPath: power
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 6884192889555683020, guid: e42521611d1dab74aa1112f43ff7999d, type: 3}
       propertyPath: m_Name
       value: Box
-      objectReference: {fileID: 0}
-    - target: {fileID: 6884192889555683021, guid: e42521611d1dab74aa1112f43ff7999d, type: 3}
-      propertyPath: m_Mass
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 6884192889555683021, guid: e42521611d1dab74aa1112f43ff7999d, type: 3}
-      propertyPath: m_LinearDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6884192889555683021, guid: e42521611d1dab74aa1112f43ff7999d, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6884192889555683021, guid: e42521611d1dab74aa1112f43ff7999d, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6884192889555683021, guid: e42521611d1dab74aa1112f43ff7999d, type: 3}
-      propertyPath: m_Simulated
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6884192889555683023, guid: e42521611d1dab74aa1112f43ff7999d, type: 3}
       propertyPath: m_LocalPosition.x
