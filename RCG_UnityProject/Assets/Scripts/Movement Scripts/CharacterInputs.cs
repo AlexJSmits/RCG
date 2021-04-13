@@ -22,6 +22,7 @@ public class CharacterInputs : MonoBehaviour
     public KeyCode leftKey;
     public KeyCode crouchKey;
     public KeyCode jumpKey;
+    public KeyCode kickKey;
 
     public bool canMove = false;
     public float startDelay;
@@ -40,6 +41,8 @@ public class CharacterInputs : MonoBehaviour
         crouchKey = KeyCode.S;
 
         jumpKey = KeyCode.Space;
+
+        kickKey = KeyCode.J;
 
         if (OnStart != null)
         {
@@ -118,8 +121,21 @@ public class CharacterInputs : MonoBehaviour
             {
                 crouch = false;
             }
-        }
 
+            if (Input.GetKey(kickKey))
+            {
+                characterAnimator.SetTrigger("Kick");
+            }
+
+            if (characterAnimator.GetCurrentAnimatorStateInfo(0).IsName("Kick"))
+            {
+                this.transform.GetChild(5).gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            }
+            else
+            {
+                this.transform.GetChild(5).gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
     }
 
     private void FixedUpdate()

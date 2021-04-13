@@ -183,10 +183,12 @@ public class CharacterController2D : MonoBehaviour
 		if (!m_FacingRight)
 		{
 			GetComponent<SpriteRenderer>().flipX = true;
+			this.transform.GetChild(5).gameObject.transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
 		}
 		else if (m_FacingRight)
 		{
 			GetComponent<SpriteRenderer>().flipX = false;
+			this.transform.GetChild(5).gameObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 		}
 	}
 }
